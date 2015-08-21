@@ -197,7 +197,7 @@ item_extract(Dets, Key) ->
 
 
 item_insert(Dets, Item, Priority) ->
-    Key = erlang:timestamp(),
+    Key = os:timestamp(),
     ok = dets:insert(Dets, {Key, Priority, Item}),
     Key.
 
